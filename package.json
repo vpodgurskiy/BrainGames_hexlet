@@ -1,5 +1,5 @@
 {
-  "name": "braingames",
+  "name": "vpod_braingames",
   "version": "0.0.1",
   "description": "Brain Games",
   "main": "dist/index.js",
