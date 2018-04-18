@@ -7,5 +7,5 @@
 ## Setup
 
 ```sh
-$ make install
+$ npm install -g vpod_braingames
 ```
