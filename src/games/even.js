@@ -1,14 +1,20 @@
-
-
-import generateNum from '../function/randNumber';
 import startGame from '..';
+import generateNum from '../function/randNumber';
 
-const description = 'Answer "yes" if number even otherwise answer "no".';
+const game = () => {
+  const num = generateNum();
+  const description = 'Answer "yes" if number even otherwise answer "no".\n';
+  const attempts = 3;
+  const question = num;
+  const answer = (num % 2 === 0) ? 'yes' : 'no';
 
-const makeGame = (num = generateNum()) => ({ question: num, answer: (num % 2 === 0) ? 'yes' : 'no' });
+  return {
+    description, attempts, question, answer,
+  };
+};
 
 const playGame = () => {
-  startGame(makeGame, description);
+  startGame(game);
 };
 
 export default playGame;

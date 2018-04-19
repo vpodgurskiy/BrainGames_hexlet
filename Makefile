@@ -18,5 +18,8 @@ lint:
 
 check-types:
 	npm run flow
+
+build:
+	npm run-script build
 	
 

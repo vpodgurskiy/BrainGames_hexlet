@@ -1,29 +1,36 @@
 
-import { question } from 'readline-sync';
+import readline from 'readline-sync';
+import { gameName, gameDescription, userName } from './function/gameProperty';
+import { checkAnswer } from './function/checkAnswers';
 
-const startGame = (createGame, description) => {
-  console.log('Welcome to Brain Games!');
-  console.log(`${description} \n`);
-  const userName = question('May I have your name? ');
-  console.log(`Hello, ${userName}! \n`);
+const startGame = (game) => {
+  const newGame = game();
+  gameName();
+  gameDescription(newGame.description);
+  const name = userName();
 
-  const attempts = 3;
-  for (let i = 0; i < attempts; i += 1) {
-    const game = createGame();
+  let count = 0;
+  while (count < newGame.attempts) {
+    const userGame = game();
 
-    console.log(`Question: ${game.question}`);
-    const result = question('Your answer: ');
-    const isCorrect = game.answer === result;
+    const gameQuestion = userGame.question;
+    console.log(`Question: ${gameQuestion}`);
+
+    const userAnswer = readline.question('Your answer: ');
+    const rightAnswer = userGame.answer;
+
+    const isCorrect = checkAnswer(userAnswer, rightAnswer);
 
     if (!isCorrect) {
-      console.log(`'${result}' is wrong answer ;(. Correct answer was ${game.answer}.`);
-      console.log(`Let's try again, ${userName}!`);
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was ${rightAnswer}.`);
+      console.log(`Let's try again, ${name}!`);
       return;
     }
     console.log('Correct!');
+    count += 1;
   }
 
-  console.log(`Congratulations, ${userName}!`);
+  console.log(`Congratulations, ${name}!`);
 };
 
 export default startGame;

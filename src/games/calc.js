@@ -1,36 +1,25 @@
 
 import generateNum from '../function/randNumber';
-import { product, sum, subtraction } from '../function/mathFunction';
+import { getAnswer } from '../function/checkAnswers';
+import { mathOp } from '../function/mathFunction';
 import startGame from '..';
 
-const description = 'What is the result of the expression?';
+const game = () => {
+  const description = 'What is the result of the expression? \n';
+  const attempts = 3;
+  const a = generateNum();
+  const b = generateNum();
+  const math = mathOp();
+  const question = `${a} ${math} ${b}`;
+  const answer = `${getAnswer(a, b, math)}`;
 
-const mathOp = () => {
-  const arrMath = ['*', '+', '-'];
-  const rand = Math.floor(Math.random() * arrMath.length);
-  return arrMath[rand];
+  return {
+    description, attempts, question, answer,
+  };
 };
-
-const getAnswer = (a, b, math) => {
-  switch (math) {
-    case '*':
-      return product(a, b);
-    case '-':
-      return subtraction(a, b);
-    case '+':
-      return sum(a, b);
-    default:
-      return 0;
-  }
-};
-
-const makeGame = (a = generateNum(), b = generateNum(), math = mathOp()) => ({
-  question: `${a} ${math} ${b}`,
-  answer: `${getAnswer(a, b, math)}`,
-});
 
 const playGame = () => {
-  startGame(makeGame, description);
+  startGame(game);
 };
 
 export default playGame;

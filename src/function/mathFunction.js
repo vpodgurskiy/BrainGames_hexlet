@@ -14,4 +14,10 @@ const subtraction = (a, b) => {
   return result;
 };
 
-export { product, sum, subtraction };
+const mathOp = () => {
+  const arrMath = ['*', '+', '-'];
+  const rand = Math.floor(Math.random() * arrMath.length);
+  return arrMath[rand];
+};
+
+export { product, sum, subtraction, mathOp };

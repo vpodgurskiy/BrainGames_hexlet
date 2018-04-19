@@ -1,6 +1,6 @@
 {
   "name": "vpod_braingames",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Brain Games",
   "main": "dist/index.js",
   "bin": {
