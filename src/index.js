@@ -2,11 +2,13 @@
 import readline from 'readline-sync';
 import { gameName, gameDescription, userName } from './function/gameProperty';
 import { checkAnswer } from './function/checkAnswers';
+import { newLine } from './function/secondary_functions';
 
 const startGame = (game) => {
   const newGame = game();
   gameName();
   gameDescription(newGame.description);
+  newLine();
   const name = userName();
 
   let count = 0;

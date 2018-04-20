@@ -3,7 +3,7 @@ import generateNum from '../function/randNumber';
 
 const game = () => {
   const num = generateNum();
-  const description = 'Answer "yes" if number even otherwise answer "no".\n';
+  const description = 'Answer "yes" if number even otherwise answer "no".';
   const attempts = 3;
   const question = num;
   const answer = (num % 2 === 0) ? 'yes' : 'no';
@@ -13,9 +13,9 @@ const game = () => {
   };
 };
 
-const playGame = () => {
+const playEvenGame = () => {
   startGame(game);
 };
 
-export default playGame;
+export default playEvenGame;
 

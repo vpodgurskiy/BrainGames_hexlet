@@ -6,7 +6,7 @@ const checkAnswer = (userAnswer, rightAnswer) => {
   return isCorrect;
 };
 
-const getAnswer = (a, b, math) => {
+const getAnswerForMathMeanings = (a, b, math) => {
   switch (math) {
     case '*':
       return product(a, b);
@@ -19,4 +19,4 @@ const getAnswer = (a, b, math) => {
   }
 };
 
-export { checkAnswer, getAnswer };
+export { checkAnswer, getAnswerForMathMeanings };
