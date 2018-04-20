@@ -7,12 +7,14 @@ import playEvenGame from '../games/even';
 import { newLine, showMenu } from '../function/secondary_functions';
 import { gameName } from '../function/gameProperty';
 
+newLine();
 gameName();
-newLine();
 showMenu();
-newLine();
 
 const game = question('Choose a game:');
+
+newLine();
+
 switch (game) {
   case '1':
     playEvenGame();
