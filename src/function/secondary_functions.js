@@ -8,6 +8,7 @@ const showMenu = () => {
   console.log('2. barin-calc');
   console.log('3. barin-gcd');
   console.log('4. barin-balance');
+  console.log('5. barin-progress');
 };
 
 export { newLine, showMenu };

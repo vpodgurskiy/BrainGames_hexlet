@@ -1,5 +1,7 @@
 
 import { product, sum, subtraction } from './mathFunction';
+import { stringToArray, arrBalance, arrayToString } from './arrayFunctions';
+import gcd from './gcd';
 
 const checkAnswer = (userAnswer, rightAnswer) => {
   const isCorrect = (userAnswer === rightAnswer);
@@ -19,4 +21,26 @@ const getAnswerForMathMeanings = (a, b, math) => {
   }
 };
 
-export { checkAnswer, getAnswerForMathMeanings };
+const getAnswerForProgression = (progression, randIndexOfProgression) => {
+  const elementOfProgression = progression[randIndexOfProgression];
+  return elementOfProgression;
+};
+
+const getAnswerForBalanceNum = (num) => {
+  const numString = String(num);
+  const arrNum = stringToArray(numString);
+  const balanceArr = arrBalance(arrNum);
+  const balNum = arrayToString(balanceArr);
+
+  return balNum;
+};
+
+const getAnswerForGcd = (a, b) => {
+  const gcdOfNum = gcd(a, b);
+  return gcdOfNum;
+};
+
+export {
+  checkAnswer, getAnswerForMathMeanings, getAnswerForProgression,
+  getAnswerForBalanceNum, getAnswerForGcd,
+};

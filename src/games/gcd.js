@@ -1,6 +1,6 @@
 
 import generateNum from '../function/randNumber';
-import gcd from '../function/gcd';
+import { getAnswerForGcd } from '../function/checkAnswers';
 import startGame from '..';
 
 const game = () => {
@@ -8,7 +8,7 @@ const game = () => {
   const a = generateNum(2, 50);
   const b = generateNum(8, 90);
   const question = `${a} ${b}`;
-  const answer = `${gcd(a, b)}`;
+  const answer = `${getAnswerForGcd(a, b)}`;
 
   return { description, question, answer };
 };

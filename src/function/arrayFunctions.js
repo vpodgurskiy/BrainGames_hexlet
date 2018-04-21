@@ -57,17 +57,8 @@ const arrayToString = (arr) => {
   return stringOfArray;
 };
 
-const balanceNum = (num) => {
-  const numString = String(num);
-  const arrNum = stringToArray(numString);
-  const balanceArr = arrBalance(arrNum);
-  const balNum = arrayToString(balanceArr);
-
-  return balNum;
-};
-
 export {
   sortArrAsc, createNewArray, arrBalance,
-  stringToArray, arrayToString, balanceNum,
+  stringToArray, arrayToString,
 };
 
