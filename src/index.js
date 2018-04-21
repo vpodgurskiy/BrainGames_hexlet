@@ -9,10 +9,13 @@ const startGame = (game) => {
   gameName();
   gameDescription(newGame.description);
   newLine();
+
   const name = userName();
 
+  const attempts = 3;
+
   let count = 0;
-  while (count < newGame.attempts) {
+  while (count < attempts) {
     const userGame = game();
 
     const gameQuestion = userGame.question;

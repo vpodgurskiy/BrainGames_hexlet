@@ -4,13 +4,10 @@ import generateNum from '../function/randNumber';
 const game = () => {
   const num = generateNum();
   const description = 'Answer "yes" if number even otherwise answer "no".';
-  const attempts = 3;
   const question = num;
   const answer = (num % 2 === 0) ? 'yes' : 'no';
 
-  return {
-    description, attempts, question, answer,
-  };
+  return { description, question, answer };
 };
 
 const playEvenGame = () => {
