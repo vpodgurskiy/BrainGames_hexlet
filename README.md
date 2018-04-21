@@ -13,8 +13,9 @@ $ npm install -g vpod_braingames
 ## Play
 
 ```sh
-$ brain-games  //run all game
-$ brain-even   //run even game
-$ brain-calc   //run calc game
-$ brain-gcd    //run gcd game
+$ brain-games    //run all game
+$ brain-even     //run even game
+$ brain-calc     //run calc game
+$ brain-gcd      //run gcd game
+$ brain-balance  //run balance game
 ```

@@ -7,8 +7,20 @@ instal-deps:
 install-flow:
 	npm run flow-typed install
 
-start:
+start-brainGames:
 	npm run babel-node -- src/bin/brain-games.js 10
+
+start-even:
+	npm run babel-node -- src/bin/brain-even.js 10
+
+start-calc:
+	npm run babel-node -- src/bin/brain-calc.js 10
+
+start-gcd:
+	npm run babel-node -- src/bin/brain-gcd.js 10
+
+start-balance:
+	npm run babel-node -- src/bin/brain-balance.js 10
 
 publish:
 	npm publish
