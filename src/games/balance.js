@@ -1,6 +1,6 @@
 import generateNum from '../function/randNumber';
 import startGame from '..';
-import balanceNum from '../function/arrayFunctions';
+import { balanceNum } from '../function/arrayFunctions';
 
 const game = () => {
   const description = 'Balance the given number.';

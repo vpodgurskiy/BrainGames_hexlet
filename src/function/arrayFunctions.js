@@ -65,5 +65,9 @@ const balanceNum = (num) => {
 
   return balNum;
 };
-export default balanceNum;
+
+export {
+  sortArrAsc, createNewArray, arrBalance,
+  stringToArray, arrayToString, balanceNum,
+};
 

@@ -1,30 +1,23 @@
 
-const gcdItter = (numArr, result = 1) => {
+const gcdItter = (a, b, result = 1) => {
   if (result === 1) return result;
-  for (let i = 0; i < numArr.length; i += 1) {
-    if (numArr[i] % result !== 0) {
-      const count = result - 1;
-      return gcdItter(numArr, count);
-    }
+  if (a % result !== 0) {
+    const count = result - 1;
+    return gcdItter(a, b, count);
+  }
+  if (b % result !== 0) {
+    const count = result - 1;
+    return gcdItter(a, b, count);
   }
   return result;
 };
 
-const min = (numArr) => {
-  let minNum = numArr[0];
-  for (let i = 0; i < numArr; i += 1) {
-    if (numArr[i] < minNum) {
-      minNum = numArr[i];
-    }
-  }
-  return minNum;
-};
-
-const gcd = (num) => {
-  const minNum = min(num);
+const gcd = (a, b) => {
+  const minNum = a < b ? a : b;
   if (minNum === 0) return 0;
-  const result = gcdItter(num, minNum);
-  return result;
+  const gcdNum = gcdItter(a, b, minNum);
+
+  return gcdNum;
 };
 
 export default gcd;
