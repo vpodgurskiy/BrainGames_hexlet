@@ -17,6 +17,7 @@ $ brain-games        //run all game
 $ brain-even         //run even game
 $ brain-calc         //run calc game
 $ brain-gcd          //run gcd game
+$ brain-prime        //run prime game
 $ brain-balance      //run balance game
 $ brain-progression  //run progression game
 ```

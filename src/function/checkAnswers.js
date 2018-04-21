@@ -1,5 +1,5 @@
 
-import { product, sum, subtraction } from './mathFunction';
+import { product, sum, subtraction, primeNum } from './mathFunction';
 import { stringToArray, arrBalance, arrayToString } from './arrayFunctions';
 import gcd from './gcd';
 
@@ -40,7 +40,12 @@ const getAnswerForGcd = (a, b) => {
   return gcdOfNum;
 };
 
+const getAnswerForPrime = (num) => {
+  const isPrime = primeNum(num);
+  return isPrime ? 'yes' : 'no';
+};
+
 export {
   checkAnswer, getAnswerForMathMeanings, getAnswerForProgression,
-  getAnswerForBalanceNum, getAnswerForGcd,
+  getAnswerForBalanceNum, getAnswerForGcd, getAnswerForPrime,
 };
